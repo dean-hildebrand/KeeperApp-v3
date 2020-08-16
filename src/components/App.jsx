@@ -5,10 +5,18 @@ import Note from "./Note";
 import CreateArea from "./CreateArea";
 
 function App() {
+
+  function addNote(note){
+    
+  }
+
+
   return (
     <div>
       <Header />
-      <CreateArea />
+      <CreateArea 
+        addNote={addNote}
+      />
       <Note 
           key={1} 
           title="Deans note" 
