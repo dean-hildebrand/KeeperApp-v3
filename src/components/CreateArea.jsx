@@ -23,6 +23,10 @@ function noteHandler(e){
 function submitNote(e){
   e.preventDefault()
   props.addNote(note)
+  setNote({
+    title: "",
+    content: ""
+  })
 }
 
   return (
