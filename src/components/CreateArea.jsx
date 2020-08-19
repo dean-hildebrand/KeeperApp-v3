@@ -11,16 +11,18 @@ const [note, setNote] = useState({
 // function that destrcutures the event, then sets state with prev state and spreads in the new note
 function noteHandler(e){
   const {name, value} = e.target
+
   setNote(prevNote => {
   return {
-    ...prevNote, [name] : value
+    ...prevNote, 
+    [name]: value
   }
 })
 }
 
 function submitNote(e){
-  e.preventDefault
-  props.addNote()
+  e.preventDefault()
+  props.addNote(note)
 }
 
   return (
